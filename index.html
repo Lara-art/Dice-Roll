@@ -9,30 +9,13 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Dice Roll</title>
 </head>
+
 <body>
     <div class="container">
         <div class="grid">
-            <div class="dice">
-                <div class="icons">
-                    <div class="value">
-                        value
-                    </div>
-                    <div>
-                        <span class="material-symbols-outlined">
-                            minimize
-                        </span>
-                        <span class="material-symbols-outlined">
-                            filter_none
-                        </span>
-                        <span class="material-symbols-outlined">
-                            close
-                        </span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="controls">
-                <div class="number">
+            <div class="flex">
+                <div class="dice">
                     <div class="icons">
                         <div class="value">
                             value
@@ -49,14 +32,41 @@
                             </span>
                         </div>
                     </div>
-                    <div class="nombre" id="valor">
-                        <p>0</p>
+                </div><!--end dice-->
+                <div class="whatdice">
+                </div><!--end whatdice-->
+            </div><!-- end flex-->
+
+            <div class="flex">
+                <div class="controls">
+                    <div class="number">
+                        <div class="icons">
+                            <div class="value">
+                                value
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    minimize
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    filter_none
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    close
+                                </span>
+                            </div>
+                        </div>
+                        <div class="nombre" id="valor">
+                            <p>0</p>
+                        </div>
                     </div>
-                </div>
-                <button>ROLL</button>
-            </div>
-        </div>
-    </div>
+                </div><!--end controls-->
+                <div></div>
+            </div><!-- end flex-->
+
+        </div><!-- end grid-->
+        <button>ROLL</button>
+    </div><!--end container-->
 </body>
 <script></script>
 
