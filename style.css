@@ -1,58 +1,114 @@
-:root{
-    --color-violeta:#a75ea6;
-    --color-verde: #80d8d3;
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+:root {
+    --color-violeta: #bbb6fb;
+    --color-shadow: #6e6aa1;
+    --color-border:#c1c2fa;
+    --color-verde: #d9e5fc;
     --color-fondo: #f4e3d4;
+    --color-letter: #3a3a3a;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 16px;
     background-color: var(--color-fondo);
+    font-family: "Poetsen One", "sans serif";
 }
 
-img{
+img {
     width: 100%;
     display: block;
 }
 
-button{
+button {
     display: block;
     cursor: pointer;
     font-size: 2rem;
     font-weight: 600;
     padding: 1rem 3rem;
+    font-family: "Poetsen One", "sans serif";
+    background-color: var(--color-border);
+    border-radius: 1.2rem ;
+    border: 1px solid var(--color-shadow);
+    transition: all 0.2s linear;
+    color: var(--color-letter);   
+}
+
+button:hover{
+    background-color: var(--color-shadow);
+    color: var(--color-violeta);
 }
 
 
-.container{
+.container {
     max-width: 1000px;
     margin: auto;
     padding: 4rem;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.controls{
+.controls {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.number{
-   padding: 6rem;
-   margin-bottom: 2rem;
+.number {
+    border: 1px solid var(--color-shadow);
+    padding: 8rem;
+    margin-bottom: 2rem;
+    background-color: var(--color-violeta);
+    border-radius: 2rem;
+    position: relative;
+}
+
+.nombre{
+    color: var(--color-letter);  
+    font-size: 3rem; 
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.4rem 1.2rem ;
+    background-color: var(--color-border);
+    border-radius: 2rem 2rem 0rem 0rem;
+    border-bottom: 1px solid var(--color-shadow);
+
+}
+
+.icons span, .value {
+    font-size: 1.4rem;
+    color: var(--color-shadow);
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 24;
 }
