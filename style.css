@@ -3,7 +3,7 @@
 :root {
     --color-violeta: #bbb6fb;
     --color-shadow: #6e6aa1;
-    --color-border:#c1c2fa;
+    --color-border: #c1c2fa;
     --color-verde: #d9e5fc;
     --color-fondo: #f4e3d4;
     --color-letter: #3a3a3a;
@@ -22,8 +22,8 @@ html {
 
 body {
     font-size: 16px;
-    background-color: var(--color-fondo);
     font-family: "Poetsen One", "sans serif";
+
 }
 
 img {
@@ -36,31 +36,43 @@ button {
     cursor: pointer;
     font-size: 2rem;
     font-weight: 600;
-    padding: 1rem 3rem;
+    padding: 1rem 6.6rem;
     font-family: "Poetsen One", "sans serif";
     background-color: var(--color-border);
-    border-radius: 1.2rem ;
+    border-radius: 1.2rem;
     border: 1px solid var(--color-shadow);
+    box-shadow: 3px 3px var(--color-shadow);
     transition: all 0.2s linear;
-    color: var(--color-letter);   
+    color: var(--color-letter);
 }
 
-button:hover{
+button:hover {
     background-color: var(--color-shadow);
     color: var(--color-violeta);
+    box-shadow: 3px 3px var(--color-violeta);
 }
-
 
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 4rem;
+    padding: 5rem;
+    height: 100vh;
+    place-content: center;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+}
+
+
+.dice {
+    border: 1px solid var(--color-shadow);
+    background-color: var(--color-violeta);
+    border-radius: 2rem;
+    position: relative;
+    box-shadow: 3px 3px var(--color-shadow);
 }
 
 .controls {
@@ -76,11 +88,7 @@ button:hover{
     background-color: var(--color-violeta);
     border-radius: 2rem;
     position: relative;
-}
-
-.nombre{
-    color: var(--color-letter);  
-    font-size: 3rem; 
+    box-shadow: 3px 3px var(--color-shadow);
 }
 
 .icons {
@@ -91,14 +99,14 @@ button:hover{
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0.4rem 1.2rem ;
+    padding: 0.4rem 1.2rem;
     background-color: var(--color-border);
-    border-radius: 2rem 2rem 0rem 0rem;
+    border-radius: 2rem 2rem 0 0;
     border-bottom: 1px solid var(--color-shadow);
-
 }
 
-.icons span, .value {
+.icons span,
+.value {
     font-size: 1.4rem;
     color: var(--color-shadow);
     font-weight: 500;
@@ -107,8 +115,24 @@ button:hover{
 
 .material-symbols-outlined {
     font-variation-settings:
-        'FILL' 0,
-        'wght' 800,
-        'GRAD' 0,
-        'opsz' 24;
+    'FILL' 0,
+    'wght' 800,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+.nombre {
+    color: var(--color-letter);
+    font-size: 3rem;
+}
+
+@media (max-width: 500px){
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+    }
+    .controls{
+        margin-top: 5rem;
+    }
 }
